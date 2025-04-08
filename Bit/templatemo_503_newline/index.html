@@ -17,6 +17,14 @@
         <link rel="stylesheet" href="footer.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+        <!-- Font Awesome (for icons) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Link your custom footer stylesheet -->
+<link rel="stylesheet" href="footer.css">
+
     </head>
 
     <body>
@@ -38,7 +46,8 @@
                 <li><a href="#0"><div class="image-icon"><img src="img/featured-icon.png"></div><h6>FEATURED</h6></a></li>
                 <li><a href="#0"><div class="image-icon"><img src="img/projects-icon.png"></div><h6>PROJECTS</h6></a></li>
                 <li><a href="#0"><div class="image-icon"><img src="img/contact-icon.png"></div><h6>CONTACT US</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/services-icon.png"></div><h6></h6>SERVICES</a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/services-icon.png"></div><h6>SERVICES</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/faq-icon.png"></div><h6>FAQ</h6></a></li>
               </ul>
             </nav> 
           </div> <!-- .cd-slider-nav -->
@@ -332,85 +341,139 @@
               </div>
             </li>
 
+            <li>
+              <div class="heading">
+                <h1>FAQ</h1>
+                <span>Frequently Asked Questions</span>
+              </div>
+              <div class="cd-full-width seventh-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="content seventh-content">
+                        <div style="max-width: 700px; margin: auto;">
+
+                          <div style="margin-bottom: 10px; background-color: #fff; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                            <div style="padding: 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleAnswer(this)">
+                              <span>What is your return policy?</span>
+                              <button style="background: none; border: none; font-size: 18px;">▼</button>
+                            </div>
+                            <div style="display: none; padding: 0 15px 15px; color: #333;">
+                              We accept returns within 30 days of purchase with the original receipt.
+                            </div>
+                          </div>
+                        
+                          <div style="margin-bottom: 10px; background-color: #fff; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                            <div style="padding: 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleAnswer(this)">
+                              <span>Do you offer international shipping?</span>
+                              <button style="background: none; border: none; font-size: 18px;">▼</button>
+                            </div>
+                            <div style="display: none; padding: 0 15px 15px; color: #333;">
+                              Yes, we ship worldwide! Delivery times may vary depending on your location.
+                            </div>
+                          </div>
+                        
+                          <div style="margin-bottom: 10px; background-color: #fff; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                            <div style="padding: 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleAnswer(this)">
+                              <span>How can I track my order?</span>
+                              <button style="background: none; border: none; font-size: 18px;">▼</button>
+                            </div>
+                            <div style="display: none; padding: 0 15px 15px; color: #333;">
+                              Once your order is shipped, you will receive an email with a tracking number.
+                            </div>
+                          </div>
+                        
+                        </div>
+                        
+                        <script>
+                          function toggleAnswer(header) {
+                            const answer = header.nextElementSibling;
+                            const button = header.querySelector('button');
+                            const isVisible = answer.style.display === 'block';
+                            answer.style.display = isVisible ? 'none' : 'block';
+                            button.textContent = isVisible ? '▼' : '▲';
+                          }
+                        </script>
+                        <div style="display: flex; justify-content: center;">
+                          <div class="primary-button">
+                            <a href="#">Discover More</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </li>
+
           </ul> <!-- .cd-hero-slider -->
         </section> <!-- .cd-hero -->
 
 
-        <footer>
-          <div class="footer-container">
-            <!-- Company Info Column -->
-            <div class="footer-col">
-              <h3 class="footer-logo">BITGLOW TECH</h3>
-              <p class="footer-mission">Transforming businesses through innovative digital solutions since 2023.</p>
-              <div class="footer-newsletter">
-                <input type="email" placeholder="Your email address">
-                <button class="newsletter-btn">Subscribe</button>
-              </div>
+        <footer class="custom-footer">
+          <!-- Upper Footer -->
+          <div class="footer-upper">
+            <!-- Company Info -->
+            <div class="footer-section">
+              <h4>BitGlow Tech</h4>
+              <p>Igniting ideas with innovation. Let's build your next digital spark together.</p>
             </div>
         
-            <!-- Services Column -->
-            <div class="footer-col">
-              <h3>Services</h3>
-              <ul class="footer-services">
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">UI/UX Design</a></li>
-                <li><a href="#">SEO Optimization</a></li>
-                <li><a href="#">No-Code Solutions</a></li>
-                <li><a href="#">Cloud Services</a></li>
-                <li><a href="#">IT Consulting</a></li>
-              </ul>
-            </div>
-        
-            <!-- Quick Links Column -->
-            <div class="footer-col">
-              <h3>Quick Links</h3>
-              <ul class="footer-links">
+            <!-- Quick Links -->
+            <div class="footer-section">
+              <h4>Quick Links</h4>
+              <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Case Studies</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
               </ul>
             </div>
         
-            <!-- Contact/Social Column -->
-            <div class="footer-col">
-              <h3>Connect With Us</h3>
-              <div class="footer-contact">
-                <p><i class="fas fa-map-marker-alt"></i> Kaloor, Ernakulam</p>
-                <p><i class="fas fa-phone"></i> 7559982566</p>
-                <p><i class="fas fa-envelope"></i> info@bitglowtech.com</p>
-              </div>
-              <div class="social-media">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
+            <!-- Newsletter -->
+            <div class="footer-section newsletter">
+              <h4>Newsletter</h4>
+              <p>Stay up to date with our latest news and updates.</p>
+              <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+        
+            <!-- Team Preview or Image -->
+            <div class="footer-section">
+              <img src="img/Bitglow pic.jpg" alt="Team Thumbnail" class="team-thumbnail">
             </div>
           </div>
         
-          <!-- Bottom Bar -->
-          <div class="footer-bottom">
-            <div class="footer-bottom-container">
-              <p>&copy; 2023 BITGLOW TECH. All Rights Reserved.</p>
-              <div class="legal-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Sitemap</a>
-              </div>
+          <!-- Lower Footer -->
+          <div class="footer-lower">
+            <!-- Social Icons -->
+            <div class="social-icons">
+              <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://linkedin.com/company/yourcompany" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:info@bitglowtech.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        
+            <!-- Legal Links -->
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
             </div>
           </div>
         </footer>
         
+        
+        
     
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <link rel="stylesheet" href="footer.css">
 
     </body>
 </html>
