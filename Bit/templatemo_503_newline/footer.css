@@ -1,33 +1,51 @@
+/* Main Footer Container */
 .custom-footer {
   background: #0a0a0a;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
+  text-align: left;
 }
 
+/* Upper Section */
 .footer-upper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 50px 60px;
-  background: #111111;
+  background: #0a0a0a;
   border-top: 5px solid #f5b200; /* Golden yellow accent */
 }
 
+/* Individual Footer Sections */
 .footer-section {
   flex: 1;
   min-width: 250px;
-  margin: 20px;
+  margin: 30px;
+  text-align: left;
 }
 
+/* Section Headings */
 .footer-section h4 {
   font-weight: 700;
   margin-bottom: 15px;
-  color: #f5b200; /* Bright yellow highlight */
+  color: #f5b200;
+  text-align: left;
 }
 
+/* Paragraphs inside footer */
+.footer-section p {
+  color: #ddd;
+  font-size: 14px;
+  padding: 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Unordered Lists */
 .footer-section ul {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 
 .footer-section ul li {
@@ -44,12 +62,22 @@
   color: #f5b200;
 }
 
+/* Newsletter Section */
 .footer-section.newsletter p {
   margin-bottom: 10px;
   font-size: 14px;
   color: #bbb;
+  text-align: left;
 }
 
+/* Newsletter Form Wrapper */
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Newsletter Email Input */
 .footer-section.newsletter input[type="email"] {
   padding: 10px;
   width: 65%;
@@ -61,6 +89,7 @@
   color: #fff;
 }
 
+/* Newsletter Button */
 .footer-section.newsletter button {
   padding: 10px 20px;
   background: #f5b200;
@@ -75,6 +104,7 @@
   background: #e0a600;
 }
 
+/* Optional Team/Brand Image */
 .team-thumbnail {
   width: 100%;
   max-width: 240px;
@@ -82,6 +112,7 @@
   box-shadow: 0 0 15px rgba(230, 172, 172, 0.4);
 }
 
+/* Lower Footer Section */
 .footer-lower {
   background: #0a0a0a;
   display: flex;
@@ -89,9 +120,11 @@
   align-items: center;
   padding: 20px 60px;
   border-top: 1px solid #333;
+  width: 100%;
   flex-wrap: wrap;
 }
 
+/* Social Icons */
 .social-icons a {
   margin-right: 15px;
   font-size: 18px;
@@ -103,6 +136,7 @@
   color: #f5b200;
 }
 
+/* Legal Links */
 .legal-links a {
   margin-left: 20px;
   color: #bbbbbb;
@@ -113,10 +147,3 @@
 .legal-links a:hover {
   color: #f5b200;
 }
-
-.footer-section p {
-  color: #ddd; /* or try #f0f0f0 or #ffffff for brighter text */
-  font-size: 14px;
-  line-height: 1.6;
-}
-
