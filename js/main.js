@@ -11,11 +11,7 @@
  */
 
 
-fetch("http://localhost:5500/contact", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, email, message }),
-});
+
 
 // Uses Node, AMD or browser globals to create a module.
 (function (root, factory) {

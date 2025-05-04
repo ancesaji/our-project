@@ -24,6 +24,38 @@
 
 <!-- Link your custom footer stylesheet -->
 <link rel="stylesheet" href="footer.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "_UI42H1pJHuYtbGWo",
+            });
+        })();
+    </script>
+     <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // these IDs from the previous steps
+              const name = document.getElementById("name").value;
+              const email = document.getElementById("email").value;
+              const message = document.getElementById("message").value;
+
+              emailjs.send('service_cs8krmb', 'template_08cxfkc', {
+                  from_name: name,
+                  from_email: email,
+                  message: message,
+                  to_name: 'bitglowtech'
+              })
+              .then(() => {
+                  console.log('SUCCESS!');
+              }, (error) => {
+                  console.log('FAILED...', error);
+              });
+          });
+      }
+  </script>
 
     </head>
 
@@ -251,7 +283,7 @@ We don’t just deliver projects — we collaborate, solve real problems, and st
                           </div>
                           <div class="col-md-8">
                             <div class="row">
-                              <form id="contact" action=""http://localhost:5501/contact" method="POST">
+                              <form id="contact" method="POST">
                                 <div class="col-md-6">
                                   <fieldset>
                                     <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
@@ -434,7 +466,7 @@ We don’t just deliver projects — we collaborate, solve real problems, and st
                           <div class="primary-button">
                             <a href="#">Discover More</a>
                           </div>
-                        </div>
+                        </div>  
                         
                       </div>
                     </div>
